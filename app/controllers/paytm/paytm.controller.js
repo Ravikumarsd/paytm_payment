@@ -14,7 +14,7 @@ module.exports= {
                     paramArray[name] = paramlist[name];
                 }
             }
-            paramArray["CALLBACK_URL"] = "http://172.16.16.80:3001/api/paytm/response";
+            paramArray["CALLBACK_URL"] = "https://pacific-island-34656.herokuapp.com/api/paytm/response";
             checksum.genchecksum(paramArray,PAYTM_MERCHANT_KEY,(err,result)=>{
                 if(err) throw err;
                 res.render("paytm/request",{ result });
